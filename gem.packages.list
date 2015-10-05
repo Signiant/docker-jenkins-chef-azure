@@ -5,5 +5,4 @@ knife-azure
 berkshelf
 nori
 json
-debugger
 safe_yaml
