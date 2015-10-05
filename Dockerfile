@@ -26,7 +26,7 @@ RUN python get-pip.py
 # Install PIP packages
 COPY pip.packages.list /tmp/pip.packages.list
 RUN chmod +r /tmp/pip.packages.list
-RUN /bin/bash -l -c "pip install `cat /tmp/gem.packages.list | tr \"\\n\" \" \"`"
+RUN /bin/bash -l -c "pip install `cat /tmp/pip.packages.list | tr \"\\n\" \" \"`"
 
 # make sure we're running latest of everything
 RUN yum update -y
