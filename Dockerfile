@@ -90,9 +90,8 @@ RUN chmod 700 /home/$BUILD_USER/.ssh
 
 #install RVM 2.1.2
 
-RUN /bin/bash -l -c "gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3"
+RUN /bin/bash -l -c "gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3"
 RUN /bin/bash -l -c "curl -L get.rvm.io | bash -s stable"
-
 RUN /bin/bash -l -c "rvm install 2.1.2"
 
 COPY gem.packages.list /tmp/gem.packages.list
